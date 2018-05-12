@@ -63,7 +63,11 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".KonfirmasiActivity" />
-        <activity android:name=".QRCodeActivity"></activity>
+        <activity android:name=".QRCodeActivity" />
+        <activity android:name=".Panduan" />
+        <activity android:name=".RiwayatPesan" />
+        <activity android:name=".mmUGM" />
+        <activity android:name=".sardjito"></activity>
     </application>
 
 </manifest>

@@ -1,12 +1,8 @@
 package com.example.meizar.test;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,7 +13,7 @@ import android.widget.LinearLayout;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private LinearLayout mViewMapButton, mInputHalteButton, mPesanButton;
+    private LinearLayout mViewMapButton, mInputHalteButton, mPesanButton, mPanduan, mRiwayat;
     Button mViewProfileButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mViewMapButton = (LinearLayout) findViewById(R.id.viewMapButton);
         mPesanButton = (LinearLayout) findViewById(R.id.pesanButton);
+        mPanduan = (LinearLayout) findViewById(R.id.panduaBtn);
+        mRiwayat = (LinearLayout) findViewById(R.id.riwayatButton);
 
         mPesanButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +40,19 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, MapsActivity.class));
             }
         });
+        mPanduan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, Panduan.class));
+            }
+        });
+        mRiwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, RiwayatPesan.class));
+            }
+        });
+
 
     }
 
@@ -59,4 +70,6 @@ public class HomeActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }
